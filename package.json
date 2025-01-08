@@ -54,7 +54,8 @@
     "dev-sync": "cp -r ./dist example/node_modules/@react-native-voice/voice",
     "type-check": "tsc -noEmit",
     "build:plugin": "tsc --build plugin",
-    "lint:plugin": "eslint plugin/src/*"
+    "lint:plugin": "eslint plugin/src/*",
+    "postinstall": "npm run build && npm run build:plugin"
   },
   "dependencies": {
     "invariant": "^2.2.4",
